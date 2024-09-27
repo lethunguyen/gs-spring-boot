@@ -10,13 +10,13 @@ public class HelloController {
 
 	@GetMapping("/")
 	public String index() {
-		return "index.html";
+		return "index";
 	}
 
 	@GetMapping("/test")
 	public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
 		model.addAttribute("name", name);
-		return "View/test.html";
+		return "test";
 	}
 
 }
